@@ -1,0 +1,190 @@
+/* Base Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505; /* Deep black superhero theme */
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+}
+
+/* iOS Glassy Sidebar */
+.glass-sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.03); /* Glass effect */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem 1rem;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #e02f2f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+/* Hover glassy effect on links */
+.nav-links a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Main Content Setup */
+.content-area {
+  margin-left: 220px; /* Make room for the sidebar */
+  padding: 0 5%;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Typography */
+.super-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.super-subtitle {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #bbb;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  color: #e02f2f;c
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #333;
+  -webkit-text-stroke: 1px #555;
+}
+
+/* Glassy Cards for Content */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.glass-card ul {
+  list-style: none;
+  line-height: 2.5;
+}
+
+.glass-card ul strong {
+  color: #e02f2f;
+  margin-right: 10px;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: #e02f2f;
+  border-color: #e02f2f;
+}
+
+/* Tab Logic */
+.tab-content { display: none; }
+.active-tab { display: block; animation: fadeIn 0.5s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Grids for works */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.project-card img { width: 100%; border-radius: 12px; margin-top: 1rem; }
+
+/* Scroll Animations */
+.hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  .glass-sidebar {
+    position: relative; top: 0; left: 0; transform: none; width: 100%;
+    border-radius: 0 0 24px 24px; padding: 1rem; margin-bottom: 2rem;
+  }
+  .nav-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .content-area { margin-left: 0; padding: 0 5%; }
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .super-title { font-size: 2.5rem; }
+}
