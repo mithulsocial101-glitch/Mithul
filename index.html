@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithul | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- iOS Glassy Sidebar -->
+  <aside class="glass-sidebar">
+    <div class="logo">MIZ.</div>
+    <ul class="nav-links">
+      <li><a href="#hero">HOME</a></li>
+      <li><a href="#mithul">MITHUL</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#writing">WRITING</a></li>
+      <li><a href="#reading">READING</a></li>
+      <li><a href="#hobbies">HOBBIES</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="content-area">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero hidden">
+      <div class="hero-content">
+        <h1 class="super-title">HEY THERE I AM MITHUL👋</h1>
+
+        <h2 class="subtitle">WELCOME TO MY DIGITAL SPACE 🌌</h2>
+        <p class="hero-desc">I like being creative and to explore new things.</p>
+        <p class="hero-desc">In my free time I like to take pictures, look at my pet fishies and plants. I like to walk daily which is good for my health. My dream is to get a cycle and to cover places around India.</p>
+        <p class="hero-desc highlight-text">Right now I am working on myself to become a productive person.</p>
+      </div>
+    </section>
+
+    <!-- MITHUL (About) Section -->
+    <section id="mithul" class="details-section hidden">
+      <h2 class="section-title">MITHUL.</h2>
+      <div class="glass-card">
+        <ul>
+          <li><strong>Name:</strong> Mithul S K</li>
+          <li><strong>Education:</strong> B.Com (Professional Accounting) <br>KPR College of arts science and research<br>2022 - 25<br><SPAN STYLE="COLOR: RED;">Currently pursuing for CMA inter </SPAN> </li>
+          
+          
+          <li><strong>PROFESSIONAL SKILLS:</strong> GST FILING,
+          TALLY ERP 9,
+          MS EXCEL,
+          CANVA ,
+          PHOTOGRAPHY &
+          VIBE CODING</li>
+          <li><strong>Experience:</strong> Banner designing and Marketing </li>
+          <li><strong>Location:</strong> Tiruppur, Tamil Nadu, India</li>
+          <li><strong>Mail:</strong> <em>Mithulsoccial101@gmail.com</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS Section -->
+    <section id="projects" class="projects-section hidden">
+      <h2 class="section-title">PROJECTS.</h2>
+      
+      <!-- Interactive Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab('canva')">CANVA</button>
+        <button class="tab-btn" onclick="openTab('photography')">PHOTOGRAPHY</button>
+        <button class="tab-btn" onclick="openTab('research')">RESEARCH</button>
+      </div>
+
+      <!-- CANVA Portfolio -->
+      <div id="canva" class="tab-content active-tab">
+        <div class="grid-3">
+          <div class="glass-card project-card">
+            <h3>Retractable Banner</h3>
+            <!-- PASTE YOUR CANVA BANNER IMAGE URL BELOW -->
+            <img src="https://via.placeholder.com/400x800/1a1a1a/e02f2f?text=Paste+Banner+Image+Link+Here" alt="Banner Work">
+          </div>
+          <div class="glass-card project-card">
+            <h3>Business Card</h3>
+            <!-- PASTE YOUR CANVA BUSINESS CARD IMAGE URL BELOW -->
+            <img src="https://via.placeholder.com/400x250/1a1a1a/e02f2f?text=Paste+Card+Image+Link+Here" alt="Business Card Work">
+          </div>
+          <div class="glass-card project-card">
+            <h3>Banner</h3>
+            <!-- PASTE YOUR CANVA HORIZONTAL BANNER IMAGE URL BELOW -->
+            <img src="https://via.placeholder.com/600x300/1a1a1a/e02f2f?text=Paste+Banner+Image+Link+Here" alt="Banner Work">
+          </div>
+        </div>
+      </div>
+
+      <!-- PHOTOGRAPHY Portfolio -->
+      <div id="photography" class="tab-content">
+        <div class="grid-2">
+          <div class="glass-card project-card">
+             <!-- PASTE YOUR BIRD/WILDLIFE PHOTO URL BELOW -->
+            <img src="https://via.placeholder.com/500x500/1a1a1a/e02f2f?text=Paste+Photo+1+Here" alt="Photography Work">
+          </div>
+          <div class="glass-card project-card">
+             <!-- PASTE YOUR BIRD/WILDLIFE PHOTO URL BELOW -->
+            <img src="https://via.placeholder.com/500x500/1a1a1a/e02f2f?text=Paste+Photo+2+Here" alt="Photography Work">
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH Portfolio -->
+      <div id="research" class="tab-content">
+        <div class="glass-card">
+          <h3>Research Publications & Works</h3>
+          <p>This is where you can type out your research summaries or provide links to your geopolitical/psychology research works.</p>
+          <!-- ADD YOUR RESEARCH TEXT HERE -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder Sections -->
+    <section id="writing" class="placeholder-section hidden"><h2 class="section-title">WRITING.</h2><div class="glass-card"><p>Articles and scripts coming soon...</p></div></section>
+    <section id="reading" class="placeholder-section hidden"><h2 class="section-title">READING.</h2><div class="glass-card"><p>Current reads and book reviews coming soon...</p></div></section>
+    <section id="hobbies" class="placeholder-section hidden"><h2 class="section-title">HOBBIES.</h2><div class="glass-card"><p>Fish keeping
+       plants
+      cycling adventures
+       and more...</p></div></section>
+
+  </main>
+</body>
+</html>
+/* Base Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505; /* Deep black superhero theme */
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+}
+
+/* iOS Glassy Sidebar */
+.glass-sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.03); /* Glass effect */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem 1rem;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #e02f2f;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+/* Hover glassy effect on links */
+.nav-links a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Main Content Setup */
+.content-area {
+  margin-left: 220px; /* Make room for the sidebar */
+  padding: 0 5%;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Typography */
+.super-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.super-subtitle {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #bbb;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  color: #e02f2f;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #333;
+  -webkit-text-stroke: 1px #555;
+}
+
+/* Glassy Cards for Content */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.glass-card ul {
+  list-style: none;
+  line-height: 2.5;
+}
+
+.glass-card ul strong {
+  color: #e02f2f;
+  margin-right: 10px;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: #e02f2f;
+  border-color: #e02f2f;
+}
+
+/* Tab Logic */
+.tab-content { display: none; }
+.active-tab { display: block; animation: fadeIn 0.5s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Grids for works */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.project-card img { width: 100%; border-radius: 12px; margin-top: 1rem; }
+
+/* Scroll Animations */
+.hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  .glass-sidebar {
+    position: relative; top: 0; left: 0; transform: none; width: 100%;
+    border-radius: 0 0 24px 24px; padding: 1rem; margin-bottom: 2rem;
+  }
+  .nav-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .content-area { margin-left: 0; padding: 0 5%; }
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .super-title { font-size: 2.5rem; }
+}
+// 1. Scroll Fade-in Animation Logic
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.1 });
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// 2. Tab Switching Logic for "PROJECTS"
+window.openTab = function(tabName) {
+  // Hide all tab contents
+  let contents = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < contents.length; i++) {
+    contents[i].classList.remove("active-tab");
+  }
+  
+  // Remove active class from all buttons
+  let buttons = document.getElementsByClassName("tab-btn");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("active");
+  }
+  
+  // Show the selected tab and highlight the button
+  document.getElementById(tabName).classList.add("active-tab");
+  event.currentTarget.classList.add("active");
+}
